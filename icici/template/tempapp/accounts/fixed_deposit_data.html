@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Saving Details</title>
+<link rel="stylesheet" href='{% static "css/demo.css" %}'>
+</head>
+<body>
+{%block baseblock %}
+{% if obj %}
+<table  align="center" style="width:50%" border="1" class="table table-hover">
+    <h3 align="center">Fixed Data Details</h3>
+    <thead class="thead-dark">
+
+    <th> ac_no</th>
+    <th> name</th>
+    <th> deposit_date</th>
+    <th> maturity_date</th>
+    <th> interest</th>
+    <th> maturity_ammount</th>
+    </thead>
+    {% for lap in obj %}
+    <tr>
+        <td>{{lap.ac_no}}</td>
+        <td>{{lap.name}}</td>
+        <td>{{lap.deposit_date}}</td>
+        <td>{{lap.maturity_date}}</td>
+        <td>{{lap.interest}}</td>
+        <td>{{lap.maturity_ammount}}</td>
+    </tr>
+    {% endfor%}
+
+</table>
+{%else%}
+<h1> No data found</h1>
+{%endif%}
+{%endblock%}
+</body>
+</html>

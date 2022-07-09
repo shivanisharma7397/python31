@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer FasTag Details</title>
+<link rel="stylesheet" href='{% static "css/demo.css" %}'>
+</head>
+<body>
+{%block baseblock %}
+{% if obj %}
+<table  align="center" style="width:50%" border="1" class="table table-hover">
+    <h3 align="center">Customer FasTag Details</h3>
+    <thead class="thead-dark">
+
+    <th> name</th>
+    <th> vehicle_no</th>
+    <th> registered_bank</th>
+
+    <th> address</th>
+
+    </thead>
+    {% for lap in obj %}
+    <tr>
+        <td>{{lap.name}}</td>
+        <td>{{lap.vehicle_no}}</td>
+        <td>{{lap.registered_bank}}</td>
+        <td>{{lap.address}}</td>
+
+
+    </tr>
+    {% endfor%}
+
+</table>
+{%else%}
+<h1> No data found</h1>
+{%endif%}
+{%endblock%}
+</body>
+</html>

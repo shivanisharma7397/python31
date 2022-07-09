@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Current Details</title>
+<link rel="stylesheet" href='{% static "css/demo.css" %}'>
+</head>
+<body>
+{%block baseblock %}
+{% if obj %}
+<table  align="center" style="width:50%" border="1" class="table table-hover">
+    <h3 align="center">Current Account  Details</h3>
+    <thead class="thead-dark">
+
+    <th> ac_no</th>
+    <th> businessname</th>
+    <th> ifsc</th>
+    <th> balance</th>
+    </thead>
+    {% for lap in obj %}
+    <tr>
+        <td>{{lap.ac_no}}</td>
+        <td>{{lap.businessname}}</td>
+        <td>{{lap.ifsc}}</td>
+        <td>{{lap.balance}}</td>
+
+    </tr>
+    {% endfor%}
+
+</table>
+{%else%}
+<h1> No data found</h1>
+{%endif%}
+{%endblock%}
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Data</title>
+<link rel="stylesheet" href='{% static "css/demo.css" %}'>
+</head>
+<body>
+{%block baseblock %}
+{% if obj %}
+<table  align="center" style="width:50%" border="1" class="table table-hover">
+    <h3 align="center">Card Data</h3>
+    <thead class="thead-dark">
+
+    <th> card_no</th>
+    <th> card_name</th>
+    <th> card_expiry</th>
+
+    </thead>
+    {% for lap in obj %}
+    <tr>
+        <td>{{lap.card_no}}</td>
+        <td>{{lap.card_name}}</td>
+        <td>{{lap.card_expiry}}</td>
+
+
+    </tr>
+    {% endfor%}
+
+</table>
+{%else%}
+<h1> No data found</h1>
+{%endif%}
+{%endblock%}
+</body>
+</html>
