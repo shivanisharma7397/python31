@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login_Page</title>
+    <link rel="stylesheet" href="{%static 'css/demo.css'%}">
+</head>
+<body>
+{%block baseblock %}
+<h4 class="display-4">Good to see you again!</h4>
+<img src="{%static 'images/img_4.png'%}" class="rounded mx-auto d-block"  alt="Responsive image">
+<div class="container" align="center">
+
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" class="btn btn-dark">Login</button>
+    </form>
+
+</div>
+{%endblock%}
+{%block baseblock2%}
+{%endblock%}
+</body>
+</html>

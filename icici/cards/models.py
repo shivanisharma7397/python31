@@ -10,7 +10,7 @@ class credit(models.Model):
 
 class fast_tag(models.Model):
     name = models.CharField(max_length=30)
-    vehicle_no= models.IntegerField()
+    vehicle_no= models.CharField(max_length=30)
     registered_bank = models.CharField(max_length=30)
     address = models.CharField(max_length=20)
 
