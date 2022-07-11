@@ -69,4 +69,4 @@ def signup(r):
             user.set_password(user.password)
             user.save()
             return HttpResponseRedirect('/accounts/login')
-        return render(r, 'tempapp/signup.html', {'form': form})
+    return render(r, 'tempapp/signup.html', {'form': form})
