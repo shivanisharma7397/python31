@@ -65,16 +65,19 @@
 
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/accounts/login/">Login</a>
+        <li class="nav-item" >
+          <a type="button" class="btn btn-info" aria-current="page" href="/accounts/login/">Login</a>
         </li>
          <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/accounts/logout/">Logout</a>
+          <a type="button" class="btn btn-outline-info" aria-current="page" href="/accounts/logout/">Logout</a>
         </li>
-	<p> welcome </p>
-        <p> {{user.username}}</p>
-      </ul>
 
+
+      </ul>
+<p  style="background-color:powderblue;" style="font-size:300%;"> welcome  {{user.username}} </p>
+        <li class="nav-item">
+          <a type="button" class="btn btn-outline-info" aria-current="page" href="/account/signup/">Sign Up</a>
+        </li>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success" type="submit">Search</button>

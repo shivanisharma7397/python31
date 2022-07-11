@@ -9,5 +9,6 @@ urlpatterns = [
     path('fddata/', views.fixed_deposit_data),
     path('currentdata/', views.current_data),
     path('savingdata/', views.saving_data),
+    path('signup/', views.signup),
 
 ]
