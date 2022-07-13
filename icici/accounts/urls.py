@@ -10,5 +10,6 @@ urlpatterns = [
     path('currentdata/', views.current_data),
     path('savingdata/', views.saving_data),
     path('signup/', views.signup),
+    path('contactus/', views.send_gmail),
 
 ]

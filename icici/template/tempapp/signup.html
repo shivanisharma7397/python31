@@ -9,8 +9,9 @@
 </head>
 <body>
 {%block baseblock %}
-<h4 class="display-4">Good to see you again!</h4>
-<img src="{%static 'images/img_4.png'%}" class="rounded mx-auto d-block"  alt="Responsive image">
+<h2>Sign Up</h2>
+<h3>Please fill in this form to create an account!</h3>
+<!--<img src="{%static 'images/img_4.png'%}" class="rounded mx-auto d-block"  alt="Responsive image">-->
 <div class="container" align="center">
 
     <form method="post">
@@ -20,6 +21,7 @@
     </form>
 
 </div>
+<h4>Already have on account!</h4><a href="/accounts/login/">login here</a>
 {%endblock%}
 {%block baseblock2%}
 {%endblock%}
