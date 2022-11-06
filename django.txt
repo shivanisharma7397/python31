@@ -3,3 +3,4 @@
 This is a django txt file
 
 thanks
+ im chetan im edited ths file 
